@@ -2,3 +2,7 @@
 Flight Trajectory Prediction Using Wavelet Transform: A Time-Frequency Perspective
 
 # requirements
+
+R1
+
+R2
