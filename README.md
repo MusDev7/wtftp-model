@@ -144,7 +144,7 @@ python train.py --saving_model_num 10 --maxlevel 3
 
 ### Test
 
-The training script is provided by `infer.py` for the evaluation. The arguments for the test process are defined bellow:
+The test script is provided by `infer.py` for the evaluation. The arguments for the test process are defined bellow:
 
 `--pre_len`: Integer. The prediction horizons for evaluation. `default=1`
 
