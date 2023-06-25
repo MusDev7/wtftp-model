@@ -112,23 +112,34 @@ The training script is provided by `train.py` for the flight trajectory predicti
 
 To train the WTFTP, use the following command.
 
-```python train.py --saving_model_num 10 --attn```
+```
+python train.py --saving_model_num 10 --attn
+```
 
 To train the WTFTP without the wavelet attention module, use the following command.
 
-```python train.py --saving_model_num 10```
+```
+python train.py --saving_model_num 10
+```
 
 To train the WTFTP of 2 or 3 level of wavelet analysis, use the following command.
 
-```python train.py --saving_model_num 10 --attn --maxlevel 2``` 
-
-```python train.py --saving_model_num 10 --attn --maxlevel 3```
+```
+python train.py --saving_model_num 10 --attn --maxlevel 2
+``` 
+```
+python train.py --saving_model_num 10 --attn --maxlevel 3
+```
 
 To train the WTFTP without the wavelet attention module of 2 or 3 level of wavelet analysis, use the following command.
 
-```python train.py --saving_model_num 10 --maxlevel 2``` 
+```
+python train.py --saving_model_num 10 --maxlevel 2
+``` 
 
-```python train.py --saving_model_num 10 --maxlevel 3```
+```
+python train.py --saving_model_num 10 --maxlevel 3
+```
 
 
 ### Test
@@ -149,7 +160,9 @@ The training script is provided by `infer.py` for the evaluation. The arguments 
 
 To test the model, use the following command.
 
-`python infer.py --netdir ./xxx.pt`
+```
+python infer.py --netdir ./xxx.pt
+```
 
 # Dataset
 
