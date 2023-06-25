@@ -37,6 +37,7 @@ wtftp-model
 + tensorboard == 2.3.0
 + tensorboardX == 2.1
 + PyWavelets == 1.2.0
++ matplotlib == 3.2.1
 
 ## System Requirements
 + Ubuntu 16.04 operating system
@@ -61,7 +62,90 @@ You are recommended to create a conda environment with the package requirements 
 
 ### Training
 
+The training script is provided by `train.py` for the flight trajectory prediction. The arguments for the training process are defined bellow:
+
+`--minibatch_len`: Integer. The sliding-window length for constructing the samples. `default=10`
+
+`--interval`: Integer. The sampling period. `default=1`
+
+`--batch_size`: Integer. The number of samples in a single training batch. `default=2048`
+
+`--epoch`: Integer. The maximum epoch for training process. `default=150`
+
+`--lr`: Float. The learning rate of the Adam optimizer. `default=0.001`
+
+`--dpot`: Float. The dropout probability. `default=0.0`
+
+`--cpu`: Optional. Use the CPU for training process.
+
+`--nolongging`: Optional. The logs will not be recorded.
+
+`--logdir`: String. The path for logs. `default='./log'`
+
+`--datadir`: String. The path for dataset. `default='./data'`
+
+`--saving_model_num`: Integer. The number of models to be saved during the training process. `default=0`
+
+`--debug`: Optional. For debugging the scripts.
+
+`--bidirectional`: Optional. Use the bidirectional LSTM block.
+
+`--maxlevel`: Integer. The level of wavelet analysis. `default=1`
+
+`--wavelet`: String. The wavelet basis. `default=haar`
+
+`--wt_mode`: String. The signal extension mode for wavelet transform. `default=symmetric`
+
+`--w_lo`: Float. The weight for the low-frequency wavelet component in the loss function. `default=1.0`
+
+`--w_hi`: Float. The weight for the high-frequency wavelet components in the loss function. `default=1.0`
+
+`--enlayer`: Integer. The layer number of the LSTM block in the encoder. `default=4`
+
+`--delayer`: Integer. The layer number of the LSTM block in the decoder. `default=1`
+
+`--embding`: Integer. The dimension of trajectory embeddings, enhanced trajectory embeddings and contextual embeddings. `default=64`
+
+`--attn`: Optional. Use the wavelet attention module in the decoder.
+
+`--cuda`: Integer. The GPU index for training process.
+
+To train the WTFTP, use the following command.
+
+`python train.py --saving_model_num 10 --attn`
+
+To train the WTFTP without the wavelet attention module, use the following command.
+
+`python train.py --saving_model_num 10`
+
+To train the WTFTP of 2 or 3 level of wavelet analysis, use the following command.
+
+`python train.py --saving_model_num 10 --attn --maxlevel 2` or `python train.py --saving_model_num 10 --attn --maxlevel 3`
+
+To train the WTFTP without the wavelet attention module of 2 or 3 level of wavelet analysis, use the following command.
+
+`python train.py --saving_model_num 10 --maxlevel 2` or `python train.py --saving_model_num 10 --maxlevel 3`
+
+
 ### Test
+
+The training script is provided by `infer.py` for the evaluation. The arguments for the test process are defined bellow:
+
+`--pre_len`: Integer. The prediction horizons for evaluation. `default=1`
+
+`--batch_size`: Integer. The number of samples in a single test batch. `default=2048`
+
+`--cpu`: Optional. Use the CPU for training process.
+
+`--logdir`: String. The path for logs. `default='./log'`
+
+`--datadir`: String. The path for dataset. `default='./data'`
+
+`--netdir`: String. The path for the model.
+
+To test the model, use the following command.
+
+`python infer.py --netdir ./xxx.pt`
 
 # Dataset
 
