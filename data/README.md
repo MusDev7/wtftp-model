@@ -1,8 +1,7 @@
 ## Note
 
-The raw flight trajectories used in this work are not available since the trajectory sequences are collected from a 
-real-world ATC system and contain a large amount of position and route information, sharing these sensitive data could 
-pose a potential risk to the safety of civil aviation operations. Nonetheless, the processed example samples are 
+We are not authorized to publicly release the whole dataset used during the current study concerning
+safety-critical issues. Nonetheless, the processed example samples are 
 available in `example_data.npy`. Source data for figures are also provided in `source_data.xlsx`.
 
 ## Guidance of example data

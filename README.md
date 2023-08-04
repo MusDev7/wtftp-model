@@ -4,6 +4,8 @@
 
 This repository provides source codes of the proposed flight trajectory prediction framework, called WTFTP, 
 and example samples for the paper "Flight trajectory prediction enabled by time-frequency wavelet transform". 
+This is a novel wavelet-based flight trajectory prediction framework by modeling global flight trends and local motion 
+details.
 
 <p  align="middle"><img src="pics/framework.png"  width="95%"/></p>
 
@@ -174,7 +176,8 @@ python infer.py --netdir ./xxx.pt
 
 # Dataset
 
-In this repository, the example samples are provided for evaluation. They can be accessed in the `\data\test`.
+In this repository, the example samples are provided for evaluation. They can be accessed in the `/data/example_data.npy`. 
+The guidance about the example data can be found in `/data/README`.
 
 
 # Acknowledgment
