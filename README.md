@@ -180,7 +180,7 @@ In this repository, the example samples are provided for evaluation. They can be
 The guidance about the example data can be found in `/data/README`.
 
 
-# Acknowledgment
+# Acknowledgement
 
 The PyTorch implementation of wavelet transform is utilized to support the procedure of the DWT and IDWT procedures 
 in this work. Its repository can be accessed [here](https://github.com/fbcotter/pytorch_wavelets). 
