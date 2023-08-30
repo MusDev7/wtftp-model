@@ -3,7 +3,8 @@
 # Introduction
 
 This repository provides source codes of the proposed flight trajectory prediction framework, called WTFTP, 
-and example samples for the paper "Flight trajectory prediction enabled by time-frequency wavelet transform". 
+and example samples for the paper <a href="https://www.nature.com/articles/s41467-023-40903-9">Flight trajectory 
+prediction enabled by time-frequency wavelet transform</a>. 
 This is a novel wavelet-based flight trajectory prediction framework by modeling global flight trends and local motion 
 details.
 
@@ -185,6 +186,10 @@ The guidance about the example data can be found in `/data/README`.
 The PyTorch implementation of wavelet transform is utilized to support the procedure of the DWT and IDWT procedures 
 in this work. Its repository can be accessed [here](https://github.com/fbcotter/pytorch_wavelets). 
 Thank all contributors to this project.
+
+# Citation
+
+Zhang, Z., Guo, D., Zhou, S. et al. Flight trajectory prediction enabled by time-frequency wavelet transform. Nat Commun 14, 5258 (2023). https://doi.org/10.1038/s41467-023-40903-9
 
 # Contact
 
